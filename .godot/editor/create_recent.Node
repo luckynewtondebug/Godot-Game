@@ -1,0 +1,14 @@
+TileMapLayer
+TileMap
+CollisionShape2D
+StaticBody2D
+Camera2D
+AnimatedSprite2D
+CharacterBody2D
+Camera3D
+DirectionalLight3D
+DirectionalLight2D
+MeshInstance3D
+CollisionShape3D
+StaticBody3D
+CharacterBody3D

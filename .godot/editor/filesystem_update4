@@ -1,0 +1,6 @@
+res://playerBall.tscn
+res://character_body_3d.gd
+res://plane.tscn
+res://scenes/game.tscn
+res://scenes/player.tscn
+res://scripts/player.gd
