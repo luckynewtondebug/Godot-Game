@@ -1,4 +1,7 @@
 CollisionShape2D
+Node
+Camera2D
+Timer
 Area2D
 AnimatedSprite2D
 Sprite2D
@@ -7,8 +10,5 @@ AnimatableBody2D
 TileMapLayer
 TileMap
 StaticBody2D
-Camera2D
 CharacterBody2D
 Camera3D
-DirectionalLight3D
-DirectionalLight2D
