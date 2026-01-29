@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var testparticle: GPUParticles2D = $Testparticle
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
@@ -13,6 +14,8 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		testparticle.emitting = true
+		
 	#Handle double jump.
 	if Input.is_action_just_pressed("jump") and !is_on_floor() and DOUBLE_JUMP!=1:
 		velocity.y =JUMP_VELOCITY
