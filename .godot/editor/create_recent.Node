@@ -1,9 +1,9 @@
 AnimationPlayer
+GPUParticles2D
 Node
 AudioStreamPlayer2D
 Label
 RayCast2D
-GPUParticles2D
 Timer
 CollisionShape2D
 Sprite2D

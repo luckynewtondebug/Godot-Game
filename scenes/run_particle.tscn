@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dy540py2vl5tc"]
+
+[ext_resource type="Texture2D" uid="uid://grleit01ayck" path="res://assets/sprites/smoke.png" id="1_akfg0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2v2sm"]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t5yxj"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(4, 0, 1)
+direction = Vector3(-1, 0, 0)
+initial_velocity_max = 100.0
+gravity = Vector3(0, 98, 0)
+
+[node name="RunParticle" type="GPUParticles2D" unique_id=1947647638]
+material = SubResource("CanvasItemMaterial_2v2sm")
+emitting = false
+texture = ExtResource("1_akfg0")
+process_material = SubResource("ParticleProcessMaterial_t5yxj")

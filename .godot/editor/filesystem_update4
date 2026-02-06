@@ -1,7 +1,5 @@
-res://scripts/player.gd
+res://scenes/jump_particle.tscn
 res://scenes/player.tscn
+res://scripts/player.gd
+res://scenes/run_particle.tscn
 res://scenes/game.tscn
-res://scripts/game_manager.gd
-res://scripts/coin.gd
-res://default_bus_layout.tres
-res://scenes/coin.tscn

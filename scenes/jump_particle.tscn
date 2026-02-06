@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dhqrb6k4mc85l"]
+
+[ext_resource type="Texture2D" uid="uid://grleit01ayck" path="res://assets/sprites/smoke.png" id="1_xcxji"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fubqs"]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_p1i8p"]
+colors = PackedColorArray(0.3553136, 0.35531354, 0.35531357, 1, 0.646029, 0.646029, 0.646029, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cnq6k"]
+gradient = SubResource("Gradient_p1i8p")
+
+[sub_resource type="Curve" id="Curve_y7m3r"]
+_data = [Vector2(0, 0.022471905), 0.0, 0.0, 0, 0, Vector2(0.20289855, 1), 0.0, 0.0, 0, 0, Vector2(0.8043478, 1), 0.0, 0.0, 0, 0, Vector2(0.99275357, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_35h53"]
+curve = SubResource("Curve_y7m3r")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jeboc"]
+lifetime_randomness = 0.08
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(6, 0, 1)
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(0, 100, 0)
+spread = 30.0
+initial_velocity_min = 10.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 98, 0)
+scale_curve = SubResource("CurveTexture_35h53")
+color_initial_ramp = SubResource("GradientTexture1D_cnq6k")
+
+[node name="JumpParticle" type="GPUParticles2D" unique_id=336374919]
+material = SubResource("CanvasItemMaterial_fubqs")
+emitting = false
+amount = 32
+texture = ExtResource("1_xcxji")
+lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_jeboc")
