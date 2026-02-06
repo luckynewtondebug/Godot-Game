@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		if direction == 0:
 			animated_sprite_2d.play("idle")
-		elif Input.is_action_pressed("run"):
+		elif  Input.is_action_pressed("run"):
 			animated_sprite_2d.play("sprint")
 		else:
 			animated_sprite_2d.play("run")
